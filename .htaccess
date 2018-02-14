@@ -1,0 +1,68 @@
+#włączenie mod_rewrite
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^Category/?$ index.php?controller=Category [L]
+RewriteRule ^Category/editForm/(\d+)/?$ index.php?controller=Category&action=editForm&id=$1 [L]
+RewriteRule ^Category/edit/?$ index.php?controller=Category&action=update [L]
+RewriteRule ^Category/delete/(\d+)/?$ index.php?controller=Category&action=delete&id=$1 [L]
+RewriteRule ^Category/addForm/?$ index.php?controller=Category&action=addForm [L]
+RewriteRule ^Category/add/?$ index.php?controller=Category&action=add [L]
+
+RewriteRule ^Address/?$ index.php?controller=Address [L]
+RewriteRule ^Address/editForm/(\d+)/?$ index.php?controller=Address&action=editForm&id=$1 [L]
+RewriteRule ^Address/edit/?$ index.php?controller=Address&action=update [L]
+RewriteRule ^Address/delete/(\d+)/?$ index.php?controller=Address&action=delete&id=$1 [L]
+RewriteRule ^Address/addForm/?$ index.php?controller=Address&action=addForm [L]
+RewriteRule ^Address/add/?$ index.php?controller=Address&action=add [L]
+
+RewriteRule ^Cargo/?$ index.php?controller=Cargo [L]
+RewriteRule ^Cargo/editForm/(\d+)/?$ index.php?controller=Cargo&action=editForm&id=$1 [L]
+RewriteRule ^Cargo/edit/?$ index.php?controller=Cargo&action=update [L]
+RewriteRule ^Cargo/delete/(\d+)/?$ index.php?controller=Cargo&action=delete&id=$1 [L]
+RewriteRule ^Cargo/addForm/?$ index.php?controller=Cargo&action=addForm [L]
+RewriteRule ^Cargo/add/?$ index.php?controller=Cargo&action=add [L]
+
+RewriteRule ^LoadOrd/?$ index.php?controller=LoadOrd [L]
+RewriteRule ^LoadOrd/editForm/(\d+)/?$ index.php?controller=LoadOrd&action=editForm&id=$1 [L]
+RewriteRule ^LoadOrd/edit/?$ index.php?controller=LoadOrd&action=update [L]
+RewriteRule ^LoadOrd/delete/(\d+)/?$ index.php?controller=LoadOrd&action=delete&id=$1 [L]
+RewriteRule ^LoadOrd/addForm/?$ index.php?controller=LoadOrd&action=addForm [L]
+RewriteRule ^LoadOrd/add/?$ index.php?controller=LoadOrd&action=add [L]
+
+RewriteRule ^Client/?$ index.php?controller=Client [L]
+RewriteRule ^Client/editForm/(\d+)/?$ index.php?controller=Client&action=editForm&id=$1 [L]
+RewriteRule ^Client/edit/?$ index.php?controller=Client&action=update [L]
+RewriteRule ^Client/delete/(\d+)/?$ index.php?controller=Client&action=delete&id=$1 [L]
+RewriteRule ^Client/addForm/?$ index.php?controller=Client&action=addForm [L]
+RewriteRule ^Client/add/?$ index.php?controller=Client&action=add [L]
+
+RewriteRule ^ContactDetails/?$ index.php?controller=ContactDetails [L]
+RewriteRule ^ContactDetails/editForm/(\d+)/?$ index.php?controller=ContactDetails&action=editForm&id=$1 [L]
+RewriteRule ^ContactDetails/edit/?$ index.php?controller=ContactDetails&action=update [L]
+RewriteRule ^ContactDetails/delete/(\d+)/?$ index.php?controller=ContactDetails&action=delete&id=$1 [L]
+RewriteRule ^ContactDetails/addForm/?$ index.php?controller=ContactDetails&action=addForm [L]
+RewriteRule ^ContactDetails/add/?$ index.php?controller=ContactDetails&action=add [L]
+
+RewriteRule ^User/?$ index.php?controller=User [L]
+RewriteRule ^User/editForm/(\d+)/?$ index.php?controller=User&action=editForm&id=$1 [L]
+RewriteRule ^User/edit/?$ index.php?controller=User&action=update [L]
+RewriteRule ^User/delete/(\d+)/?$ index.php?controller=User&action=delete&id=$1 [L]
+RewriteRule ^User/addForm/?$ index.php?controller=User&action=addForm [L]
+RewriteRule ^User/add/?$ index.php?controller=User&action=add [L]
+
+RewriteRule ^Worker/?$ index.php?controller=Worker [L]
+RewriteRule ^Worker/editForm/(\d+)/?$ index.php?controller=Worker&action=editForm&id=$1 [L]
+RewriteRule ^Worker/edit/?$ index.php?controller=Worker&action=update [L]
+RewriteRule ^Worker/delete/(\d+)/?$ index.php?controller=Worker&action=delete&id=$1 [L]
+RewriteRule ^Worker/addForm/?$ index.php?controller=Worker&action=addForm [L]
+RewriteRule ^Worker/add/?$ index.php?controller=Worker&action=add [L]
+
+RewriteRule ^Access/logform/?$ index.php?controller=Access&action=logform [L]
+RewriteRule ^Access/login/?$ index.php?controller=Access&action=login [L]
+RewriteRule ^Access/logout/?$ index.php?controller=Access&action=logout [L]
+
+ErrorDocument 404 http://localhost/09_Smarty_MVC/errors/404.html
